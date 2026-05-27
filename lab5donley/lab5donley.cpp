@@ -101,28 +101,30 @@ void create_arrow_bitmap(ALLEGRO_BITMAP* arrow_bmp[], ALLEGRO_DISPLAY* display)
 		int x = 15;
 		int y = 15;
 		
-		al_draw_filled_rounded_rectangle(x - 20, y - 20, x + 20, y + 20, 3, 3, al_map_rgb(50, 20, 100));
-		al_draw_ellipse(x, y, x + 6, y + 8, al_map_rgb(255, 255, 255), 2);
+		//al_draw_filled_rounded_rectangle(x - 20, y - 20, x + 20, y + 20, 3, 3, al_map_rgb(245, 235, 199));
+		al_draw_circle(x-1, y-1, 15, al_map_rgb(0, 255, 255), 2);
+		al_draw_filled_circle(x - 2, y - 2, 10, al_map_rgb(255, 255, 255));
 		al_draw_filled_circle(x, y, 10, al_map_rgb(60, 105, 215));
+		//al_draw_line(x, y+30, x, y - 30, al_map_rgb(0, 255, 0), 5);
 		
 
 		switch (i)
 		{
 		case 0: //Up
 			//al_draw_filled_triangle(x - 10, y - 10, x + 11, y - 10, x, y - 15, al_map_rgb(255, 0, 0));
-			al_draw_pieslice(x+11, y+11, 10, 0, 360, al_map_rgb(255, 0, 0), 2);
+			al_draw_pieslice(x, y-10, 10, 0, 360, al_map_rgb(255, 0, 0), 2);
 			break;
 		case 1://Right
 			//al_draw_filled_triangle(x + 11, y - 11, x + 11, y + 11, x + 15, y, al_map_rgb(255, 0, 0));
-			al_draw_pieslice(x+11, y-11, 10, 0, 360, al_map_rgb(255, 0, 0), 2);
+			al_draw_pieslice(x+10, y, 10, 0, 360, al_map_rgb(255, 0, 0), 2);
 			break;
 		case 2://Down
 			//al_draw_filled_triangle(x - 11, y + 11, x + 11, y + 11, x, y + 15, al_map_rgb(255, 0, 0));
-			al_draw_pieslice(x-11, y+11, 10, 0, 360, al_map_rgb(255, 0, 0), 2);
+			al_draw_pieslice(x, y+10, 10, 0, 360, al_map_rgb(255, 0, 0), 2);
 			break;
 		case 3: //Left
 			//al_draw_filled_triangle(x - 11, y - 11, x - 11, y + 11, x - 15, y, al_map_rgb(255, 0, 0));
-			al_draw_pieslice(x-11, y-11, 10, 0, 360, al_map_rgb(255, 0, 0), 2);
+			al_draw_pieslice(x-11, y, 10, 0, 360, al_map_rgb(255, 0, 0), 2);
 			break;
 		}
 	}
